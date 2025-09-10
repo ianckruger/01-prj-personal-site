@@ -1,1 +1,58 @@
 /* Add you CSS here */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  background-color:#8797B2;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+li  {
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: #ffd791;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: blue;
+}
+
+.active {
+  background-color: rgb(240, 209, 168);
+  color: white;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  
+}
+
+section {
+  padding-left: 100px;
+}
+
+#home {
+  background-color: #6D8A96;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
