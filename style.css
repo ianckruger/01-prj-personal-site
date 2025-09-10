@@ -1,47 +1,55 @@
 /* Add you CSS here */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100px;
-  background-color:#8797B2;
-  height: 100vh;
-  overflow: auto;
+nav {
   position: fixed;
   top: 0;
   left: 0;
+  width: 120px;
+  height: 100vh;
+  background-color: #64403e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 30px;
 }
-
-li  {
-  text-align: center;
-}
-
-li a {
-  display: block;
+nav ul li a {
   color: #ffd791;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-li a:hover {
-  color: blue;
+nav ul li a:hover,
+nav ul li a.active {
+  color: #CCE2A3;
+  font-weight: 700;
 }
 
-.active {
-  background-color: rgb(240, 209, 168);
-  color: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-  margin: 0;
   height: 100%;
-  
+  font-family: 'Poppins', sans-serif;
+  color: #2b2b2b;
+}
 }
 
 section {
-  padding-left: 100px;
+  min-height: 100vh;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #home {
@@ -51,8 +59,6 @@ section {
   
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+main {
+  margin-left: 120px;
 }
