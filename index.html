@@ -5,6 +5,8 @@
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <nav>
@@ -34,10 +36,7 @@
         </h1>
         <p>Building stylish web and app experiences with a more "modern" touch.</p>
       </div>
-      <img src="https://source.unsplash.com/500x500/?technology" alt="Hero Image">
-    </section>
-    <section id="projects">
-
+      <img src="img/portfolio-drawing.jpg" alt="Hero Image">
     </section>
     <section id="projects">
         <h2>Projects</h2>
@@ -51,12 +50,57 @@
       <section id="skills">
         <h2>Skills</h2>
         <ul class="skills-list">
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Vue.js</li>
-          <li>Python</li>
+          <li><i class="fa-brands fa-html5"></i> HTML5</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+          <li><i class="fa-brands fa-vuejs"></i> Vue.js</li>
+          <li><i class="fa-brands fa-python"></i> Python</li>
+          <li><i class="fa-solid fa-database"></i> Databases</li>
         </ul>
       </section>
+      
+      <section id="Photos">
+
+        
+        <!-- Button to show a random photo -->
+         <div class="button-container">
+          <h2 class="photo-header">Photos</h2>
+          <button id="randomPhotoBtn">Show Random Photo</button>
+        </div>
+        <!-- Image will appear here -->
+        <div id="photoContainer">
+          <img id="randomPhotoImg" src="" alt="Random Photo" style="display:none;" />
+        </div>
+      </section>
   </main>
+  <!-- Simple script to show a random photo with fade animation -->
+  <script>
+    // List of photo filenames in img/photos/
+    const photoList = [
+      'img/photos/buddhahike.jpg',
+      'img/photos/fuji.jpg',
+      'img/photos/image.jpg',
+      'img/photos/tokyotemple.jpg'
+    ];
+
+    const btn = document.getElementById('randomPhotoBtn');
+    const img = document.getElementById('randomPhotoImg');
+
+    btn.addEventListener('click', function() {
+      // Pick a random photo
+      const randomIndex = Math.floor(Math.random() * photoList.length);
+      const newSrc = photoList[randomIndex];
+
+      // Fade out
+      img.style.transition = 'opacity 0.4s';
+      img.style.opacity = 0;
+      setTimeout(function() {
+        img.src = newSrc;
+        img.style.display = 'block';
+        // Fade in
+        img.style.opacity = 1;
+      }, 400);
+    });
+  </script>
 </body>
 </html>
